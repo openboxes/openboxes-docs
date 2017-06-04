@@ -1,2 +1,1 @@
-# openboxes-docs
-OpenBoxes Documentation
+# OpenBoxes Documentation
