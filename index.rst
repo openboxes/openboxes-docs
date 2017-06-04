@@ -8,13 +8,43 @@ OpenBoxes
 
 .. toctree::
    :maxdepth: 1
-
+   :caption: Overview
    benefits
-   considerations
-   installation/index 
-   configuration
+   considerations 
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Installation Guide
+
+   installation/index
    release-notes
+
+
+.. toctree:: 
+   :maxdepth: 1
+   :caption: Configuration
+    
+   configuration
+
+.. toctree::
+   :maxdepth: 1
+   :caption: User Guide
+   
+   user-guide/index
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Developer Guide
+   
+   developer-guide/index
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Support
+  
    support
+
+
 
 Indices and tables
 ==================
