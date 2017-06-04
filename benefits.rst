@@ -1,5 +1,5 @@
-Benefits of using OpenBoxes
-===========================
+Benefits
+========
 
 Free, open-source software
 --------------------------
