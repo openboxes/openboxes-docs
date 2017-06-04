@@ -10,14 +10,14 @@ response operations.
 
    benefits
    considerations 
+   support
+   release-notes
 
 .. toctree::
    :maxdepth: 1
    :caption: Installation Guide
 
    installation/index
-   release-notes
-
 
 .. toctree:: 
    :maxdepth: 1
@@ -36,12 +36,7 @@ response operations.
    :caption: Developer Guide
    
    developer-guide/index
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Support
   
-   support
 
 
 
