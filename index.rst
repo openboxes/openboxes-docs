@@ -3,19 +3,19 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to openboxes-docs's documentation!
-==========================================
+OpenBoxes
+=========
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
 
    benefits
-   considerations   
+   considerations
+   installation/index 
    configuration
    release-notes
-   support/index
-   installation/index
+   support
 
 Indices and tables
 ==================
