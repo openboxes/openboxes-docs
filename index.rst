@@ -7,10 +7,15 @@ Welcome to openboxes-docs's documentation!
 ==========================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
-
+   benefits
+   considerations   
+   configuration
+   release-notes
+   support/index
+   installation/index
 
 Indices and tables
 ==================
