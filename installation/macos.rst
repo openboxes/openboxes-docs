@@ -1,5 +1,5 @@
-Looking to contribute?
-======================
+Mac OS
+======
 
-We would love for you to create a pull request to add installation
+We would love if someone with a Mac could create a pull request to add installation
 instructions for the Mac.

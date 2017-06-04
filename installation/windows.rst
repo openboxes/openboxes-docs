@@ -1,5 +1,5 @@
-Looking to contribute?
-======================
+Windows
+=======
 
-We would love for you to create a pull request to add installation
+We would love for someone running Windows to create a pull request to add installation
 instructions for Windows.
