@@ -8,7 +8,6 @@ OpenBoxes
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents:
 
    benefits
    considerations
