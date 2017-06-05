@@ -4,8 +4,7 @@ OpenBoxes is an open-source supply chain management system designed to
 manage supplies and medications for healthcare facilities and disaster
 response operations.
 
-<img src="http://openboxes.com/images/screenshots/browse-inventory-table.png"/>
-
+.. image:: img/browse-inventory.png
 
 .. toctree::
    :maxdepth: 1
@@ -41,13 +40,4 @@ response operations.
    :caption: Developer Guide
    
    developer-guide/index
-  
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

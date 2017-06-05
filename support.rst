@@ -8,7 +8,9 @@ Team <https://openboxes.com/support>`__ through the various support
 channels. Or safe yourself the extra click and just email us at 
 `support@openboxes.com <support@openboxes.com>`__.
 
-`!Oliver <../img/oliver.png>`__
+.. image:: img/oliver.jpg
+
+
 
 Community Support
 -----------------
