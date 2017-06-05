@@ -4,7 +4,8 @@ User Guide
 Please be patient as our documentation expert (a.k.a our lead developer)
 is busy making the software not suck so he's had some trouble finding
 time to update these guides. If you would like to contribute to this
-User Guide, please refer to the `Contributing`_.
+User Guide, please refer to the :ref:`Contributing <contributing>` section of the Developer
+Guide.
 
 If you would prefer to submit documentation updates as Word docs or
 collaborate with us using Google Docs, please share the docs or links
