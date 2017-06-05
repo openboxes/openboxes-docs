@@ -18,7 +18,7 @@ response operations.
    release-notes
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Installation Guide
 
    installation/index
@@ -36,7 +36,7 @@ response operations.
    user-guide/index
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Developer Guide
    
    developer-guide/index
