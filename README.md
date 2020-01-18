@@ -1,1 +1,2 @@
-# OpenBoxes Documentation
+# Initial page
+
