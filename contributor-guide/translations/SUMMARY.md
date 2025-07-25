@@ -1,3 +1,3 @@
 # Table of contents
 
-* [Page](README.md)
+* [Creating New Translations](README.md)
