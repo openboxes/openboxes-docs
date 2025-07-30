@@ -4,21 +4,19 @@ The following outlines the steps required in order to create a new release of Op
 
 It is the responsibility of the release manager to not only perform the release, but to determine if the application is in a stable enough state for us to be deemed as "release-ready".
 
-### 1. Merge the 'develop' branch into 'main'
+<figure><img src=".gitbook/assets/release-flow.png" alt="diagram describing the commit flow through a release"><figcaption></figcaption></figure>
 
-We do our development work in the 'develop' branch. This branch has all of our latest changes, and so is not stable to release from. To start the release process, merge develop into main (which is our stable branch).
+### 1. Create a new release branch off of 'main'
 
-&#x20;
+#### 1a. Creating the branch
 
-### 2. Bump the application version
+We do our development work in the 'develop' branch. This branch has all of our latest changes, and so is not stable to release from. Once we've completed all feature development for the release, the release process can be started by creating a new branch for the release. This branch is known as the "Release Candidate".
 
-{% hint style="info" %}
-We typically give ourselves a one week "Regression Sprint" after merging develop into main but before bumping the app version. This sprint acts as a buffer period as it allows us to test the release to confirm its stability. At this time we "freeze" the develop and main branches, only allowing changes to be merged in that are essential to the release.
+Creating the release branch at this point saves us from needing to "freeze" the develop branch. Since we have already cut a branch containing the release candidate, regular development can continue in parallel.
 
-If testing unconvers any bugs, we submit the bugfix to the develop branch and then merge the change down to main.
+The release branch should be named: `release/<release_version>`  where `release_version` is the semver number of the upcoming release.
 
-We only proceed with bumping the app version and creating the release branch once we've completed our full testing plan and all discovered issues have been resolved.
-{% endhint %}
+For example, if the application is being bumped to `v0.9.8`, the branch should be named `release/0.9.8`
 
 Our releases follow the [Semantic Versioning (semver) pattern](https://semver.org/). In short:
 
@@ -32,35 +30,59 @@ For example, if we're currently on v1.4.3 and need to create a new release:
 
 * if we're only making a bug fix -> v1.4.4
 * if we're adding new functionality -> v1.5.0
-* if we're making backwards incompatible change -> v2.0.0
+* if we're making a backwards incompatible change -> v2.0.0
+
+#### 1b. Bumping the application version
+
+As a part of the merge, change the version number in the `gradle.properties` file:
+
+```
+version=x.y.z-RC
+```
+
+Where `x.y.z` is the new version. Often the version number will already be correct, but make sure to change `-SNAPSHOT` to `-RC` (release candidate).
+
+This step is optional, but we do it so that we can very easily distinguish between released versions (`x.y.z`), release candidates (`x.y.z-RC`), and development versions (`x.y.z-SNAPSHOT`)
+
+The commit message for this change should be `"create release candidate x.y.z"` (where `x.y.z` is the new version).
 
 
 
-Once you've determined the version that we need to upgrade to, change the version number in the `gradle.properties` file:
+### 2. Test the release
+
+{% hint style="info" %}
+Release testing is currently being conducted by PIH + SolDevelo staff. Testing is done on a dedicated staging environment.
+{% endhint %}
+
+After creating the release branch, we typically give ourselves a one week "Regression Sprint". This sprint acts as a buffer period as it allows us to test the release candidate to confirm its stability.
+
+If testing unconvers any bugs, we submit the bugfix directly to the release branch.
+
+
+
+### 3. Merge the release branch into 'main'
+
+Now that our release candidate is through testing, we merge it into the 'main' branch (which is our stable branch).
+
+#### 3a. Bump the application version
+
+As a part of the merge, remove `-SNAPSHOT` from the end of the version number in the `gradle.properties` file:
 
 ```
 version=x.y.z
 ```
 
-Where `x.y.z` is the new version. Make sure to remove `-SNAPSHOT` from the end of the version number.
-
 The commit message for this change should be `"bumped app version to x.y.z"` (where `x.y.z` is the new version).
 
+With this commit, the "release candidate" becomes a proper release.
 
-
-### 3. Create a new release branch off of 'main'
-
-Now that we're ready to release, we can create a branch off of the final commit of the release (bumping the app version). We do this so that we can easly merge and release patch fixes to existing releases.
-
-The release branch should be named: `release/<release_version>`  where `release_version` is the semver number of the upcoming release.
-
-For example, if the application is being bumped to `v0.9.8`, the branch should be named `release/0.9.8`
+At this point we \*could\* delete the release branch, but we've opted to keep them around for the sake of transparency, and so that we can easily patchfix old releases if we ever needed to.
 
 
 
 ### 4. Tag the release commit
 
-We need to tag the commit from step 2 so that we can create the actual release from it. First, find the commit number.
+We need to tag the commit from step 3 so that we can create the actual release from it. First, find the commit number.
 
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
@@ -92,6 +114,8 @@ All you should need to do is confirm everything looks as expected and add any ad
 ### 6. Merge back up to develop
 
 Now that the release is completed, we need to merge main back up to develop so that the develop is up to date with any new commits from main.
+
+#### 6a. Bump the application version
 
 As a part of the merge, bump the patch version in the `gradle.properties` file, adding SNAPSHOT to the end (signifying this new version is unreleased):
 
