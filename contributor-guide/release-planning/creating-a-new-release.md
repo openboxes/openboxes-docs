@@ -32,7 +32,7 @@ For example, if we're currently on v1.4.3 and need to create a new release:
 * if we're adding new functionality -> v1.5.0
 * if we're making a backwards incompatible change -> v2.0.0
 
-#### 1b. Bumping the application version
+#### 1b. Bumping the application version (optional)
 
 As a part of the merge, change the version number in the `gradle.properties` file:
 
@@ -66,7 +66,7 @@ Now that our release candidate is through testing, we merge it into the 'main' b
 
 #### 3a. Bump the application version
 
-As a part of the merge, remove `-SNAPSHOT` from the end of the version number in the `gradle.properties` file:
+As a part of the merge, remove `-RC` (or `-SNAPSHOT` if step 1b was not performed) from the end of the version number in the `gradle.properties` file:
 
 ```
 version=x.y.z
@@ -76,27 +76,27 @@ The commit message for this change should be `"bumped app version to x.y.z"` (wh
 
 With this commit, the "release candidate" becomes a proper release.
 
-At this point we \*could\* delete the release branch, but we've opted to keep them around for the sake of transparency, and so that we can easily patchfix old releases if we ever needed to.
+At this point we \*could\* delete the release branch, but we've opted to keep them around for the sake of transparency, and so that we can easily patch fix old releases if we ever needed to.
 
 
 
 ### 4. Tag the release commit
 
-We need to tag the commit from step 3 so that we can create the actual release from it. First, find the commit number.
+We need to tag the commit from step 3a so that we can create the actual release from it. First, find the commit number.
 
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 Then create the tag and push it to the repository:
 
 ```console
-git tag -a vx.y.z -m 'Release x.y.z'
+git tag -a v<release_version> <commit_hash> -m 'Release <release_version>'
 git push --tags
 ```
 
-Where `x.y.z` is the semver number of the upcoming release. For example:
+Where `<release_version>` is the semver of the release, and `<commit_hash>` is the unique id of the commit that you want to tag. For example, using the above image:
 
 ```
-git tag -a v1.2.3 -m 'Release 1.2.3'
+git tag -a v0.9.4 f90e61f -m 'Release 0.9.4'
 ```
 
 
