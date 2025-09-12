@@ -93,7 +93,8 @@ Create the "openboxes" user:
 
 ```
 mysql -u root -p -e 'CREATE USER "openboxes"@"localhost" IDENTIFIED BY "openboxes";'
-mysql -u root -p -e 'GRANT ALL ON openboxes.* TO "openboxes"@"localhost";'
+mysql -u root -p -e 'GRANT ALL PRIVILEGES ON openboxes.* TO "openboxes"@"localhost";'
+mysql -u root -p -e 'FLUSH PRIVILEGES;'
 ```
 
 #### 3. Create Openboxes configuration file
@@ -182,5 +183,5 @@ npm run watch
 
 This will cause the fronted to rebuild itself automatically after any code change that you make. All you need to do is refresh the browser window to see the changes take effect. Without this line, you'd need to restart your server to have any React changes take effect.
 
-In addition to this, now that you're building the frontend NPM dependencies yourself, you can comment out any lines in the `build.gradle` file that contain `dependsOn 'npm_run_bundle'.` This allows the backend start much faster since it prevents it from also rebuilding the NPM depedencies.
+In addition to this, now that you're building the frontend NPM dependencies yourself, you can comment out any lines in the `build.gradle` file that contain `dependsOn 'npm_run_bundle'.` This allows the backend to start much faster since it prevents it from also rebuilding the NPM depedencies.
 
