@@ -64,9 +64,22 @@ If testing unconvers any bugs, we submit the bugfix directly to the release bran
 
 Now that our release candidate is through testing, we merge it into the 'main' branch (which is our stable branch).
 
+#### 3a. Merge the release branch into main
+
+```
+git switch release/x.y.z
+git pull
+git switch main
+git pull
+git merge release/x.y.z
+git push origin main
+```
+
+This will perform a fast-forward merge if there are no conflicts, which will update main to include the commit history of the release branch without a merge commit. Otherwise if there are conflicts (there shouldn't be) it will require them to be resolved and a merge commit will be created.
+
 #### 3a. Bump the application version
 
-As a part of the merge, remove `-RC` (or `-SNAPSHOT` if step 1b was not performed) from the end of the version number in the `gradle.properties` file:
+In a new commit on main, remove `-RC` (or `-SNAPSHOT` if step 1b was not performed) from the end of the version number in the `gradle.properties` file:
 
 ```
 version=x.y.z
@@ -82,9 +95,16 @@ At this point we \*could\* delete the release branch, but we've opted to keep th
 
 ### 4. Tag the release commit
 
-We need to tag the commit from step 3a so that we can create the actual release from it. First, find the commit number.
+We need to tag the commit from step 3b so that we can create the actual release from it. First, find the commit number.
 
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+First, make sure you have the version bumping commit locally (which you might not if you did step 3b via editing the file directly in GitHub):
+
+```
+git switch main
+git pull
+```
 
 Then create the tag and push it to the repository:
 
@@ -115,7 +135,20 @@ All you should need to do is confirm everything looks as expected and add any ad
 
 Now that the release is completed, we need to merge main back up to develop so that the develop is up to date with any new commits from main.
 
-#### 6a. Bump the application version
+#### 6a. Merge main into the develop branch
+
+```
+git switch main
+git pull
+git switch develop
+git pull
+git merge main
+git push origin develop
+```
+
+This will perform a fast-forward merge if there are no conflicts, which will update main to include the commit history of the release branch without a merge commit. Otherwise if there are conflicts (there might be) it will require them to be resolved and a merge commit will be created.
+
+#### 6b. Bump the application version
 
 As a part of the merge, bump the patch version in the `gradle.properties` file, adding SNAPSHOT to the end (signifying this new version is unreleased):
 
