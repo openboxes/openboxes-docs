@@ -104,8 +104,9 @@ Create the `~/.grails/openboxes.yml` file with the following contents:
 {% tabs %}
 {% tab title="MariaDB" %}
 ```
-dataSource.url=jdbc:mariadb://localhost:3306/openboxes?serverTimezone=UTC&useSSL=false
-dataSource.driverClassName: org.mariadb.jdbc.Driver
+dataSource:
+  url: jdbc:mariadb://localhost:3306/openboxes?serverTimezone=UTC&useSSL=false
+  driverClassName: org.mariadb.jdbc.Driver
 ```
 {% endtab %}
 
@@ -149,24 +150,34 @@ To disable the jobs, add the following to your openboxes.yml:
 # This stops the background jobs from running on app startup,
 # which is very resource intensive and slow.
 openboxes:
-  refreshAnalyticsDataOnStartup.enabled: false
+  refreshAnalyticsDataOnStartup:
+    enabled: false
 
   jobs:
-    # If you're not modifying stock you can disable this, otherwise keep it enabled
-    refreshProductAvailabilityJob.enabled: true
-    
-    sendStockAlertsJob.enabled: false
-    refreshInventorySnapshotJob.enabled: false
-    refreshInventorySnapshotAfterTransactionJob.enabled: false
-    refreshOrderSummaryJob.enabled: false
-    refreshTransactionFactJob.enabled: false
-    refreshStockoutDataJob.enabled: false
-    refreshDemandDataJob.enabled: false
-    assignIdentifierJob.enabled: false
-    calculateHistoricalQuantityJob.enabled: false
-    dataCleaningJob.enabled: false
-    dataMigrationJob.enabled: false
-    updateExchangeRatesJob.enabled: false
+    sendStockAlertsJob:
+      enabled: false
+    refreshInventorySnapshotJob:
+      enabled: false
+    refreshInventorySnapshotAfterTransactionJob:
+      enabled: false
+    refreshOrderSummaryJob:
+      enabled: false
+    refreshTransactionFactJob:
+      enabled: false
+    refreshStockoutDataJob:
+      enabled: false
+    refreshDemandDataJob:
+      enabled: false
+    assignIdentifierJob:
+      enabled: false
+    calculateHistoricalQuantityJob:
+      enabled: false
+    dataCleaningJob:
+      enabled: false
+    dataMigrationJob:
+      enabled: false
+    updateExchangeRatesJob:
+      enabled: false
 ```
 
 
