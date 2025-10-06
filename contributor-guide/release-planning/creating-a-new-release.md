@@ -75,7 +75,14 @@ git merge release/x.y.z
 git push origin main
 ```
 
-This will perform a fast-forward merge if there are no conflicts, which will update main to include the commit history of the release branch without a merge commit. Otherwise if there are conflicts (there shouldn't be) it will require them to be resolved and a merge commit will be created.
+This will perform a fast-forward merge if there are no conflicts, which will update main to include the commit history of the release branch without a merge commit. Otherwise if there are conflicts, it will require them to be resolved and a merge commit will be created.
+
+Resolve all the merge conflicts. (You can do this [directly in Intellij](https://www.jetbrains.com/help/idea/resolve-conflicts.html) if you like.) Then run:
+
+```
+git commit    (hit ctrl + x to save the commit with the default message)
+git push origin main
+```
 
 #### 3a. Bump the application version
 
@@ -146,7 +153,14 @@ git merge main
 git push origin develop
 ```
 
-This will perform a fast-forward merge if there are no conflicts, which will update main to include the commit history of the release branch without a merge commit. Otherwise if there are conflicts (there might be) it will require them to be resolved and a merge commit will be created.
+This will perform a fast-forward merge if there are no conflicts, which will update develop to include the commit history of main without a merge commit. Otherwise if there are conflicts, it will require them to be resolved and a merge commit will be created.
+
+Resolve all the merge conflicts. (You can do this [directly in Intellij](https://www.jetbrains.com/help/idea/resolve-conflicts.html) if you like.) Then run:
+
+```
+git commit    (hit ctrl + x to save the commit with the default message)
+git push origin develop
+```
 
 #### 6b. Bump the application version
 
