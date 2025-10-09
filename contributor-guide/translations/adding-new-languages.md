@@ -20,6 +20,10 @@ This should cause Crowdin to automatically create a pull request into the openbo
 
 See [Crowdin's documentation](https://support.crowdin.com/project-settings/languages/#target-languages) for additional information.
 
+The following video covers everything required to configure Crowdin (plus also explains how the In-Context feature works):
+
+{% embed url="https://www.youtube.com/watch?v=ktfw7UsW3qw" %}
+
 ### Adding a language to OpenBoxes
 
 Edit the `application.yml` file and add the [two letter locale code](https://simplelocalize.io/data/locales/) of the new language to the `supportedLocales` property:
