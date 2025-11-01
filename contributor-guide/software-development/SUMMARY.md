@@ -11,7 +11,7 @@
 * [Running OpenBoxes Locally](onboarding/running-openboxes-locally.md)
 * [Configuring your IDE](onboarding/configuring-your-ide.md)
 * [Local Debugging](onboarding/local-debugging.md)
-* [How To Make a Pull Request](onboarding/how-to-make-a-pull-request.md)
+* [Contributing Code to the Project](onboarding/contributing-code-to-the-project.md)
 
 ## Automation Testing
 
