@@ -25,15 +25,17 @@ However, if you ever need to manually create a Docker image for the application,
 
 ### Running Docker Images
 
+{% hint style="info" %}
+We provide [Docker Compose files](https://github.com/openboxes/openboxes/tree/develop/docker) that greatly simplify the process of starting up your application containers and hooking them up to your SQL server. We recommend using the compose files instead of trying to manually run and configure the containers yourself.
+{% endhint %}
+
 Once you have a Docker image (whether it's an official release or one you created yourself) you can use it to start up a containerized version of OpenBoxes.
 
 We assume that you have already configured your database server by this point.
 
-We provide [Docker Compose files](https://github.com/openboxes/openboxes/tree/develop/docker) that greatly simplify the process of starting up your application containers and hooking them up to your SQL server, but if you'd rather start your container manually via docker commands you can do so via the following:
-
 If running an official release image, run the following:
 
-* run `docker run -p 8080:8080 --name=openboxes ghcr.io/openboxes/openboxes:latest`&#x20;
+* `docker run -p 8080:8080 --name=openboxes ghcr.io/openboxes/openboxes:latest`&#x20;
   * If you need a specific version, you can replace `latest` with that version (such as `v0.9.5`)
 
 If running a manually created image, run the following:
@@ -66,9 +68,13 @@ The logs will then be able to be accessed with: `journalctl -u docker CONTAINER_
 
 #### **Running against a database server on the host machine**
 
+{% hint style="info" %}
+This process is much simpler via use of the [Docker Compose files](https://github.com/openboxes/openboxes/tree/develop/docker), and is specifically handled for you in [docker-compose-hostdb.yml](https://github.com/openboxes/openboxes/blob/develop/docker/docker-compose-hostdb.yml)
+{% endhint %}
+
 You can connect a containerized OpenBoxes instance to a SQL server that is running on the host by using the `host.docker.internal` keyword in the JDBC url.
 
-Again, this process is much simpler via use of the [Docker Compose files](https://github.com/openboxes/openboxes/tree/develop/docker), but if you want to do it manually, you can do so by overriding the `DATASOURCE_URL` environment variable and by adding the host gateway.
+To achieve this, override the `DATASOURCE_URL` environment variable and add the host gateway via the `--add-host` parameter.
 
 For example: `docker run -p 8080:8080 --name=openboxes --env DATASOURCE_URL='jdbc:mysql://host.docker.internal:3306/openboxes?useSSL=false' --add-host host.docker.internal:host-gateway openboxes/openboxes:latest`
 
