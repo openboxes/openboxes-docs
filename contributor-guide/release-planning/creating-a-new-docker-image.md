@@ -8,7 +8,7 @@ However, if you ever need to manually create a Docker image for the application,
 
 #### Prerequisites
 
-1. Install [Docker](https://docs.docker.com/) (20.04+)
+1. Install [Docker](https://docs.docker.com/) (any Docker Engine v24 or later should do)
 2. Clone the [openboxes repository](https://github.com/openboxes/openboxes)
 3. Set up an [openboxes database with a valid db user](https://openboxes.gitbook.io/contributor-guide/software-development/onboarding/running-openboxes-locally#id-2.-configure-the-database-instance)
 
