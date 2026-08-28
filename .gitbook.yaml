@@ -1,0 +1,34 @@
+root: ./contributor-guide/
+
+structure:
+  readme: README.md
+  summary: SUMMARY.md
+
+# Every path below was published by the previous seven-space structure and may be
+# linked from Slack, GitHub issues or search results. Keep these entries.
+redirects:
+  overview: README.md
+  overview/terminology: start-here/glossary.md
+
+  software-development: how-openboxes-works/README.md
+  software-development/technical-overview/example-request-flow: how-openboxes-works/request-flow.md
+  software-development/technical-overview/terminology: start-here/glossary.md
+  software-development/onboarding/running-openboxes-locally: contribute-code/set-up-your-environment/running-openboxes-locally.md
+  software-development/onboarding/configuring-your-ide: contribute-code/README.md
+  software-development/onboarding/local-debugging: contribute-code/set-up-your-environment/local-debugging.md
+  software-development/onboarding/contributing-code-to-the-project: contribute-code/README.md
+  software-development/automation-testing/running-automation-tests: contribute-code/test-your-change.md
+  software-development/coding-conventions/backend-code-conventions: contribute-code/README.md
+
+  translations: contribute-without-code/translations/README.md
+  translations/adding-new-languages: contribute-without-code/translations/adding-new-languages.md
+
+  release-planning: contribute-without-code/suggest-a-feature.md
+  release-planning/creating-a-new-release: for-maintainers/cut-a-release.md
+  release-planning/creating-a-new-docker-image: for-maintainers/publish-a-docker-image.md
+
+  quallity-assurance-testing: contribute-without-code/report-a-bug.md
+  quality-assurance-testing: contribute-without-code/report-a-bug.md
+
+  writing-documentation: contribute-without-code/improve-these-docs.md
+  financial-planning: contribute-without-code/fund-the-project.md
