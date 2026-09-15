@@ -18,8 +18,6 @@ redirects:
   translations/adding-new-languages: contribute-without-code/translations/adding-new-languages.md
 
   release-planning: contribute-without-code/suggest-a-feature.md
-  release-planning/creating-a-new-release: for-maintainers/cut-a-release.md
-  release-planning/creating-a-new-docker-image: for-maintainers/publish-a-docker-image.md
 
   quallity-assurance-testing: contribute-without-code/report-a-bug.md
   quality-assurance-testing: contribute-without-code/report-a-bug.md

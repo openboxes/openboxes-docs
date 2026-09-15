@@ -8,7 +8,7 @@ The following outlines the steps required in order to create a new release of Op
 
 It is the responsibility of the release manager to not only perform the release, but to determine if the application is in a stable enough state for us to be deemed as "release-ready".
 
-<figure><img src="../.gitbook/assets/release-flow.png" alt="diagram describing the commit flow through a release"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/release-flow.png" alt="diagram describing the commit flow through a release"><figcaption></figcaption></figure>
 
 ### 1. Create a new release branch off of 'main'
 
@@ -22,7 +22,7 @@ The release branch should be named: `release/<release_version>`  where `release_
 
 For example, if the application is being bumped to `v0.9.8`, the branch should be named `release/0.9.8`
 
-For how to choose the version number, and how `develop`, `main` and release branches relate to each other, see [Repositories and Branches](../how-openboxes-works/repositories-and-branches.md#versioning).
+For how to choose the version number, and how `develop`, `main` and release branches relate to each other, see [Repositories and Branches](/how-openboxes-works/repositories-and-branches#versioning).
 
 #### 1b. Bumping the application version (optional)
 
@@ -96,7 +96,7 @@ At this point we \*could\* delete the release branch, but we've opted to keep th
 
 We need to tag the commit from step 3b so that we can create the actual release from it. First, find the commit number.
 
-<figure><img src="../.gitbook/assets/release-commit-hash.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/release-commit-hash.png" alt=""><figcaption></figcaption></figure>
 
 First, make sure you have the version bumping commit locally (which you might not if you did step 3b via editing the file directly in GitHub):
 

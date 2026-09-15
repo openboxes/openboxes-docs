@@ -1,0 +1,7 @@
+# Paths published while these pages lived inside the contributor-guide space.
+redirects:
+  for-maintainers/cut-a-release: cut-a-release.md
+  for-maintainers/publish-a-docker-image: publish-a-docker-image.md
+  for-maintainers/administer-crowdin: administer-crowdin.md
+  release-planning/creating-a-new-release: cut-a-release.md
+  release-planning/creating-a-new-docker-image: publish-a-docker-image.md

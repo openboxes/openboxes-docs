@@ -25,7 +25,7 @@ The branch model and versioning below describe the main `openboxes` repository. 
 
 Because release branches are cut early, `develop` never has to be frozen — regular development continues in parallel while a release is being tested.
 
-For the full procedure, see [Cut a Release](../for-maintainers/cut-a-release.md).
+For the full procedure, see [Cut a Release](/maintainers/cut-a-release).
 
 ## Versioning
 

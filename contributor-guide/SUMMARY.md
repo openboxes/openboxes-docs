@@ -36,9 +36,3 @@
 * [Tech Stack](how-openboxes-works/README.md)
 * [Request Flow](how-openboxes-works/request-flow.md)
 * [Repositories and Branches](how-openboxes-works/repositories-and-branches.md)
-
-## For Maintainers
-
-* [Cut a Release](for-maintainers/cut-a-release.md)
-* [Publish a Docker Image](for-maintainers/publish-a-docker-image.md)
-* [Administer Crowdin](for-maintainers/administer-crowdin.md)

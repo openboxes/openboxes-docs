@@ -1,13 +1,17 @@
 # Site structure for the OpenBoxes Contributor Guide.
 # https://gitbook.com/docs/publishing-documentation/site-structure
 #
-# Top-level site.structure entries must be sections; spaces are nested under a
-# section's `children`. The guide is a single space inside a single section.
+# Two sections, rendered as tabs in the site header. Each section holds one
+# space, and each space is a directory containing its own README.md and
+# SUMMARY.md.
 #
-# Both are marked `default: true`, which means neither slug is appended to the
-# site's URL: the default section is served from the site root, and a default
-# space is served from its section's root. Page URLs therefore stay at
-# <site>/<page> rather than gaining guide/contributor-guide segments.
+# "Contribute" is the default section, so its slug is not appended to the URL
+# and its pages keep the paths they already have. "Maintainers" is not the
+# default, so its slug does appear: /maintainers/cut-a-release. Redirects for
+# the pages that moved live in maintainers/.gitbook.yaml.
+#
+# The keys below are stable identity — GitBook matches content across syncs by
+# key, not by title, path or directory. Do not rename them.
 $schema: https://api.gitbook.com/gitbook-docs.yaml
 
 site:
@@ -15,14 +19,27 @@ site:
   structure:
     - type: section
       key: section-contributor-guide
-      title: Contributor Guide
-      path: guide
+      title: Contribute
+      path: contribute
       default: true
       children:
         - type: space
           key: space-contributor-guide
-          title: Contributor Guide
+          title: Contribute
           path: contributor-guide
           default: true
           content:
             directory: ./contributor-guide
+
+    - type: section
+      key: section-maintainers
+      title: Maintainers
+      path: maintainers
+      children:
+        - type: space
+          key: space-maintainers
+          title: Maintainers
+          path: maintainers
+          default: true
+          content:
+            directory: ./maintainers

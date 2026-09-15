@@ -13,5 +13,5 @@ Get in contact with us by posting to the [OpenBoxes Slack](http://slack-signup.o
 Once the language has been added, you can start translating — see [Translate OpenBoxes](./).
 
 {% hint style="info" %}
-Are you a project administrator adding the language yourself? See [Administer Crowdin](../../for-maintainers/administer-crowdin.md).
+Are you a project administrator adding the language yourself? See [Administer Crowdin](/maintainers/administer-crowdin).
 {% endhint %}

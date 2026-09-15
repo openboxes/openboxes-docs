@@ -19,6 +19,6 @@ Once your pull request is created, we will review it as soon as possible. A revi
 
 If your pull request goes quiet for a while, give us a nudge on [Slack](http://slack-signup.openboxes.com/). We'd rather be reminded than leave your work sitting.
 
-Once approved, a maintainer will merge your change into `develop`. It will ship to users in the next release — see [Cut a Release](../for-maintainers/cut-a-release.md) for how that works.
+Once approved, a maintainer will merge your change into `develop`. It will ship to users in the next release — see [Cut a Release](/maintainers/cut-a-release) for how that works.
 
 Thanks again for your contribution!

@@ -4,13 +4,13 @@ description: Adding a target language to Crowdin and making it selectable in Ope
 
 # Administer Crowdin
 
-These instructions are for project administrators. If you're a community translator who wants a new language added, see [Adding a New Language](../contribute-without-code/translations/adding-new-languages.md) instead.
+These instructions are for project administrators. If you're a community translator who wants a new language added, see [Adding a New Language](/contribute-without-code/translations/adding-new-languages) instead.
 
 ## Adding a language to Crowdin
 
 Translated languages in Crowdin are known as "target languages". To add a new target language, navigate to the project settings > Languages, then select any new languages that we want to support.
 
-<figure><img src="../.gitbook/assets/crowdin-target-languages.png" alt="the Crowdin target languages setting"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/crowdin-target-languages.png" alt="the Crowdin target languages setting"><figcaption></figcaption></figure>
 
 This should cause Crowdin to automatically create a pull request into the openboxes repository containing a new `messages.properties` file for the language.
 
@@ -32,4 +32,4 @@ openboxes:
 
 After redeploying the application, the new language should be selectable in the list of locales in the website footer.
 
-<figure><img src="../.gitbook/assets/openboxes-language-footer.png" alt="the language selector in the OpenBoxes footer"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/openboxes-language-footer.png" alt="the language selector in the OpenBoxes footer"><figcaption></figcaption></figure>

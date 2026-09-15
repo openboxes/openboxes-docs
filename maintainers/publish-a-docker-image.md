@@ -12,7 +12,7 @@ If you ever need to manually create a Docker image for the application, follow t
 
 1. Install [Docker](https://docs.docker.com/) (any Docker Engine v24 or later should do)
 2. Clone the [openboxes repository](https://github.com/openboxes/openboxes)
-3. Set up an [openboxes database with a valid db user](../contribute-code/set-up-your-environment/running-openboxes-locally.md#id-2.-configure-the-database-instance)
+3. Set up an [openboxes database with a valid db user](/contribute-code/set-up-your-environment/running-openboxes-locally#id-2.-configure-the-database-instance)
 
 ## Steps
 
@@ -23,4 +23,4 @@ If you ever need to manually create a Docker image for the application, follow t
 4. Run `docker build --tag="openboxes/openboxes:latest" build/docker/`
    1. This will take in the WAR file and build a Docker image for the app.
 
-To run the image you've just built, see [Running with Docker](../contribute-code/set-up-your-environment/running-with-docker.md).
+To run the image you've just built, see [Running with Docker](/contribute-code/set-up-your-environment/running-with-docker).

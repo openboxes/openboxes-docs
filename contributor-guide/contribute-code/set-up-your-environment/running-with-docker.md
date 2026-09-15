@@ -22,7 +22,7 @@ docker run -p 8080:8080 --name=openboxes ghcr.io/openboxes/openboxes:latest
 
 If you need a specific version, you can replace `latest` with that version (such as `v0.9.5`). [Release images](https://github.com/openboxes/openboxes/pkgs/container/openboxes) are published automatically for every tagged release.
 
-To run an image you built yourself (see [Publish a Docker Image](../../for-maintainers/publish-a-docker-image.md)):
+To run an image you built yourself (see [Publish a Docker Image](/maintainers/publish-a-docker-image)):
 
 ```
 docker run -p 8080:8080 --name=openboxes openboxes/openboxes:latest
