@@ -6,6 +6,7 @@
 $schema: https://api.gitbook.com/gitbook-docs.yaml
 
 site:
+  title: Contributor Guide
   structure:
     - type: space
       key: contributor-guide
