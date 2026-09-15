@@ -1,4 +1,4 @@
-root: ./contributor-guide/
+root: ./
 
 structure:
   readme: README.md
