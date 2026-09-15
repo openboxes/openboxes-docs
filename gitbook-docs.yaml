@@ -1,15 +1,28 @@
 # Site structure for the OpenBoxes Contributor Guide.
-# https://gitbook.com/docs/docs-as-code/git-sync/monorepos
+# https://gitbook.com/docs/publishing-documentation/site-structure
 #
-# The guide is a single space. Each space's own .gitbook.yaml, README.md and
-# SUMMARY.md live inside its content directory.
+# Top-level site.structure entries must be sections; spaces are nested under a
+# section's `children`. The guide is a single space inside a single section.
+#
+# Both are marked `default: true`, which means neither slug is appended to the
+# site's URL: the default section is served from the site root, and a default
+# space is served from its section's root. Page URLs therefore stay at
+# <site>/<page> rather than gaining guide/contributor-guide segments.
 $schema: https://api.gitbook.com/gitbook-docs.yaml
 
 site:
   title: Contributor Guide
   structure:
-    - type: space
-      key: contributor-guide
+    - type: section
+      key: section-contributor-guide
       title: Contributor Guide
-      content:
-        directory: ./contributor-guide
+      path: guide
+      default: true
+      children:
+        - type: space
+          key: space-contributor-guide
+          title: Contributor Guide
+          path: contributor-guide
+          default: true
+          content:
+            directory: ./contributor-guide
