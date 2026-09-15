@@ -9,8 +9,11 @@ description: Which repository holds what, and how our branches relate to each ot
 | Repository | What's in it |
 | ---------- | ------------ |
 | [openboxes/openboxes](https://github.com/openboxes/openboxes) | The application itself — Grails backend, React frontend, database migrations, and the user and administrator documentation published to [docs.openboxes.com](https://docs.openboxes.com). |
-| [openboxes/openboxes-e2e](https://github.com/openboxes/openboxes-e2e) | The Playwright end-to-end test suite, which runs against a deployed environment. See [Test Your Change](../contribute-code/test-your-change.md). |
+| [openboxes/openboxes-mobile](https://github.com/openboxes/openboxes-mobile) | The React Native mobile app for iOS and Android. See [Mobile App](../contribute-code/mobile-app.md). |
+| [openboxes/openboxes-e2e](https://github.com/openboxes/openboxes-e2e) | The Playwright end-to-end test suite, which runs against a deployed environment. See [End-to-End Tests](../contribute-code/end-to-end-tests.md). |
 | [openboxes/openboxes-docs](https://github.com/openboxes/openboxes-docs) | This contributor guide. See [Improve These Docs](../contribute-without-code/improve-these-docs.md). |
+
+The branch model and versioning below describe the main `openboxes` repository. The other repositories follow their own conventions — check their recent history.
 
 ## Branches in the main repository
 

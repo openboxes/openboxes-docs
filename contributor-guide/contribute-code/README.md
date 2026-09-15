@@ -4,7 +4,19 @@ description: The path from picking a task to getting your pull request merged.
 
 # Your First Contribution
 
-Thank you for your interest in contributing code to OpenBoxes! This section walks through the whole path in order. If you're new, read it start to finish — each step assumes you've done the one before it.
+Thank you for your interest in contributing code to OpenBoxes!
+
+## Which codebase?
+
+| Codebase | Built with | Where to go |
+| --- | --- | --- |
+| **Web application** — the main OpenBoxes app | Grails (Groovy) and React | The five steps below |
+| **Mobile app** | React Native and TypeScript | [Mobile App](mobile-app.md) |
+| **End-to-end tests** | Playwright and TypeScript | [End-to-End Tests](end-to-end-tests.md) |
+
+## Contributing to the web application
+
+The steps below cover [openboxes/openboxes](https://github.com/openboxes/openboxes), the main web application. Read them start to finish if you're new — each step assumes you've done the one before it.
 
 ### 1. [Set up your environment](set-up-your-environment/running-openboxes-locally.md)
 
@@ -25,6 +37,11 @@ Run the frontend and backend test suites, and add tests covering what you change
 ### 5. [Open a pull request](open-a-pull-request.md)
 
 Submit your change back to the `develop` branch and work with a reviewer to get it merged.
+
+## Other codebases
+
+* [Mobile App](mobile-app.md) — the React Native app, in [openboxes-mobile](https://github.com/openboxes/openboxes-mobile)
+* [End-to-End Tests](end-to-end-tests.md) — the Playwright suite, in [openboxes-e2e](https://github.com/openboxes/openboxes-e2e)
 
 ***
 

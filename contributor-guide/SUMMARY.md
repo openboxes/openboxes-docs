@@ -19,6 +19,8 @@
   * [Forking and Branching](contribute-code/write-your-change/forking-and-branching.md)
 * [4. Test Your Change](contribute-code/test-your-change.md)
 * [5. Open a Pull Request](contribute-code/open-a-pull-request.md)
+* [Mobile App](contribute-code/mobile-app.md)
+* [End-to-End Tests](contribute-code/end-to-end-tests.md)
 
 ## Contribute Without Code
 

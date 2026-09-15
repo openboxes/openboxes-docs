@@ -36,8 +36,6 @@ For instructions on how to run backend API tests, see [the integration test READ
 
 ### End-To-End Tests
 
-We have an end-to-end (E2E) test suite written in Playwright. These tests run against a live, deployed environment and are meant to simulate real user behaviour.
-
-See the [e2e repository](https://github.com/openboxes/openboxes-e2e) for instructions on how to contribute.
+We have an end-to-end (E2E) test suite written in Playwright. These tests run against a live, deployed environment and are meant to simulate real user behaviour. They live in their own repository — see [End-to-End Tests](end-to-end-tests.md) for how to set them up and contribute.
 
 **Next:** [Open a pull request](open-a-pull-request.md)

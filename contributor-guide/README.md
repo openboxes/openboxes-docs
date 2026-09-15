@@ -8,19 +8,26 @@ Welcome to the OpenBoxes community! We're incredibly grateful that you're intere
 
 As an open source project, we rely on the generous contributions of the community to help us achieve our goals of making a supply chain tool that anyone can use, regardless of their background or socio-economic status. Every little bit helps, so whether you're an open source veteran or just getting started, we welcome you with open arms. Thank you for supporting open source!
 
-## Contribute code
+## Where do I start?
 
-Most people arrive here wanting to fix a bug or build a feature. If that's you, start with [**Your first contribution**](contribute-code/) — it walks you from picking a task through to opening a pull request.
+OpenBoxes is spread across a few repositories. Find what you want to do, and this table tells you which one you'll be working in and which page to read first.
 
-## Contribute without code
+| I want to&#x2026; | Repository | Start here |
+| --- | --- | --- |
+| Fix a bug or build a feature in the web app | [openboxes](https://github.com/openboxes/openboxes) | [Your First Contribution](contribute-code/) |
+| Work on the mobile app | [openboxes-mobile](https://github.com/openboxes/openboxes-mobile) | [Mobile App](contribute-code/mobile-app.md) |
+| Write automated tests | [openboxes-e2e](https://github.com/openboxes/openboxes-e2e) | [End-to-End Tests](contribute-code/end-to-end-tests.md) |
+| Translate the app into my language | — (via Crowdin) | [Translate OpenBoxes](contribute-without-code/translations/) |
+| Report a bug I've found | [openboxes](https://github.com/openboxes/openboxes/issues) | [Report a Bug](contribute-without-code/report-a-bug.md) |
+| Suggest a feature | [openboxes](https://github.com/openboxes/openboxes/discussions/categories/ideas) | [Suggest a Feature](contribute-without-code/suggest-a-feature.md) |
+| Fix or expand this guide | [openboxes-docs](https://github.com/openboxes/openboxes-docs) | [Improve These Docs](contribute-without-code/improve-these-docs.md) |
+| Help fund the project | — (via Open Collective) | [Fund the Project](contribute-without-code/fund-the-project.md) |
 
-You don't need to write code to make OpenBoxes better. Some of the most valuable contributions we receive don't touch the codebase at all:
+Most people arrive wanting to fix a bug or build a feature in the web app. If that's you, [**Your First Contribution**](contribute-code/) walks you from picking a task through to opening a pull request.
 
-* [**Translate OpenBoxes**](contribute-without-code/translations/) — localize the application into your language
-* [**Report a bug**](contribute-without-code/report-a-bug.md) — tell us what's broken so we can fix it
-* [**Suggest a feature**](contribute-without-code/suggest-a-feature.md) — help shape where the project goes next
-* [**Improve these docs**](contribute-without-code/improve-these-docs.md) — fix an error or fill a gap in this guide
-* [**Fund the project**](contribute-without-code/fund-the-project.md) — help cover hosting costs and developer time
+You don't need to write code to help. Translations, bug reports and documentation fixes are some of the most valuable contributions we receive, and none of them require a development environment.
+
+See [Repositories and Branches](how-openboxes-works/repositories-and-branches.md) for what each repository holds and how our branches work.
 
 ## Understand the system
 
