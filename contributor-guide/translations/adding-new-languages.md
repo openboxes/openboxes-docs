@@ -37,3 +37,30 @@ openboxes:
 After redeploying the application, the new language should be selectable in the list of locales in the website footer.
 
 <figure><img src=".gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+
+### Adding date translations to the frontend
+
+The React frontend formats dates (month and day names, the date picker calendar) with [date-fns](https://date-fns.org/). To keep the bundle small, only the locales listed in `src/js/consts/dateFnsLocales.js` are included, so a new language also has to be added there. Otherwise dates on React pages will be displayed in English.
+
+Check that [date-fns supports the language](https://github.com/date-fns/date-fns/tree/main/src/locale), then import its locale and add it to the exported object under the same code that you added to `supportedLocales`:
+
+```js
+import {
+  ar, de, enUS, es, fi, fr, ht, it, nl, pt,
+} from 'date-fns/locale';
+
+const dateFnsLocales = {
+  ar, de, enUS, es, fi, fr, ht, it, nl, pt,
+};
+```
+
+If the date-fns locale has a different name than the OpenBoxes locale code (for example `zhCN` for `zh`), map it explicitly:
+
+```js
+const dateFnsLocales = {
+  // ...
+  zh: zhCN,
+};
+```
+
+If date-fns doesn't support the language, skip this step. Dates for that language will fall back to English.
